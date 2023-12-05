@@ -21,27 +21,22 @@ function enableButtons() {
     document.getElementById("displayWord").innerHTML = "The Magic Word is " + inputCharacter;
     if(InputText.length>0) {
         document.getElementById("addBeginning").disabled = false;
-        document.getElementById("addMiddle").disabled = false;
         document.getElementById("addEnd").disabled = false;
     }
     else {
         document.getElementById("addBeginning").disabled = true;
-        document.getElementById("addMiddle").disabled = true;
         document.getElementById("addEnd").disabled = true;
     }
     if (inputCharacter.length>=18) {
         document.getElementById("addBeginning").disabled = true;
-        document.getElementById("addMiddle").disabled = true;
         document.getElementById("addEnd").disabled = true;
     }
     if(inputCharacter.length>0) {
         document.getElementById("delBeginning").disabled = false;
-        document.getElementById("delMiddle").disabled = false;
         document.getElementById("delEnd").disabled = false;
     }
     else {
         document.getElementById("delBeginning").disabled = true;
-        document.getElementById("delMiddle").disabled = true;
         document.getElementById("delEnd").disabled = true;
     }
     document.getElementById("input2").focus();
@@ -81,18 +76,12 @@ enableButtons();
 <button id="addBeginning" onclick="addToBeginning();">
     Add To Beginning
 </button>
-<button id="addMiddle">
-    Add To Middle
-</button>
 <button id="addEnd" onclick="addtoEnd();">
     Add To End
 </button>
 <br>
 <button id="delBeginning" onclick="deleteFromBeginning();">
     Delete From Beginning
-</button>
-<button id="delMiddle" >
-    Delete From Middle
 </button>
 <button id="delEnd" onclick="deleteFromEnd();">
     Delete From End
